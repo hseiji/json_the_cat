@@ -16,9 +16,9 @@ const fetchBreedDescription = (breed, callback) => {
   
     // Edge Case: Breed not found
     if (data.length === 0) {
-      console.log("Breed was not found");
-      return;
-    } 
+      // return callback(error, "Breed was not found");
+      return callback("Breed was not found");
+    }
     // It returns the breed's description
     return callback(error, data[0].description);
   });
