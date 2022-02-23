@@ -20,12 +20,9 @@ describe("fetchBreedDescription", () => {
 
   it("returns Breed was not found for an invalid breed that is passed in", (done) => {
     fetchBreedDescription("Bulldog", (err, desc) => {
-      // we expect no error for this scenario
-      assert.equal(err, null);
-      
       // we expect a message of "Breed was not found"
       const expected = "Breed was not found";
-      assert.equal(desc, expected);
+      assert.equal(err, expected);
 
       done();
     });
